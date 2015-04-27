@@ -14,8 +14,8 @@
 //-----------------------------------------------------------------------------
 // Defines
 
-#define CMP_BUFFER_SIZE    36312        // Size of compression buffer
-#define EXP_BUFFER_SIZE    12596        // Size of decompress buffer
+#define CMP_BUFFER_SIZE    (36312 + sizeof(void *) * 3 - 4 * 3)       // Size of compression buffer
+#define EXP_BUFFER_SIZE    (12596 + sizeof(void *) * 3 - 4 * 3)       // Size of decompress buffer
 
 #define CMP_BINARY             0        // Binary compression
 #define CMP_ASCII              1        // Ascii compression
